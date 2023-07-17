@@ -21,9 +21,10 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-#development:
-#  <<: *default
-#  database: Crazy4Cats_development
+development:
+  <<: *default
+  url: <%= ENV['postgres://mysite:PMHYkUVamyBKLHbpuJhx1QwX0OIHQ605@dpg-ciqjosunqql4qa75vk2g-a/mysite_4pfm'] %>
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -79,6 +80,6 @@ default: &default
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
-  <<: *default
-  url: <%= ENV['postgres://mysite:PMHYkUVamyBKLHbpuJhx1QwX0OIHQ605@dpg-ciqjosunqql4qa75vk2g-a/mysite_4pfm'] %>
+#production:
+#  <<: *default
+  
