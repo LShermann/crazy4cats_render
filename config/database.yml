@@ -81,4 +81,4 @@ default: &default
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['postgres://mysite:PMHYkUVamyBKLHbpuJhx1QwX0OIHQ605@dpg-ciqjosunqql4qa75vk2g-a/mysite_4pfm'] %>
