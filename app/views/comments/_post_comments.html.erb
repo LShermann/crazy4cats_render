@@ -1,0 +1,23 @@
+<div>
+    <% @comments.each do |comment| %>
+        
+        <div class="card text-center">
+        <div class="card-header">
+          <%= comment.user.name %>
+        </div>
+        <div class="card-body">
+          <div class="card-img-top">
+                      <%= image_tag(comment.user.photo) %>
+                  </div>
+                      <p class="card-text">
+                      <%= comment.content %>
+                      </p>
+        <div class="card-footer text-body-secondary">
+          <%= comment.updated_at %>
+        </div>
+      </div>
+            </div>
+        </div>
+    <% end %>
+</div>
+
